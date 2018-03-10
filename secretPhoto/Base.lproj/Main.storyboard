@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="secretPhoto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgJ-60-98y">
+                                <rect key="frame" x="147" y="291" width="80" height="30"/>
+                                <state key="normal" title="Load Image"/>
+                                <connections>
+                                    <action selector="loadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gTf-2m-U5b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3TA-KZ-2Nj">
+                                <rect key="frame" x="136" y="329" width="102" height="30"/>
+                                <state key="normal" title="Decode Secret"/>
+                                <connections>
+                                    <action selector="decodeSecret:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F5A-Tj-Yx5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zq9-ja-JYI">
+                                <rect key="frame" x="137" y="367" width="100" height="30"/>
+                                <state key="normal" title="Encode Secret"/>
+                                <connections>
+                                    <action selector="encodeSecret:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S1A-NQ-PBy"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LJm-FT-mhC">
+                                <rect key="frame" x="16" y="66" width="343" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Ldj-Kj-gz8"/>
+                                    <constraint firstAttribute="height" constant="182" id="Onf-cW-sZg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LJm-FT-mhC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0XL-lQ-0Fw"/>
+                            <constraint firstItem="LJm-FT-mhC" firstAttribute="centerX" secondItem="zq9-ja-JYI" secondAttribute="centerX" id="DuI-s7-RoI"/>
+                            <constraint firstItem="TgJ-60-98y" firstAttribute="top" secondItem="LJm-FT-mhC" secondAttribute="bottom" constant="43" id="Uoy-mC-DgC"/>
+                            <constraint firstItem="zq9-ja-JYI" firstAttribute="top" secondItem="3TA-KZ-2Nj" secondAttribute="bottom" constant="8" symbolic="YES" id="ctm-GQ-o2Y"/>
+                            <constraint firstItem="3TA-KZ-2Nj" firstAttribute="top" secondItem="TgJ-60-98y" secondAttribute="bottom" constant="8" symbolic="YES" id="iWD-6L-0Ug"/>
+                            <constraint firstItem="LJm-FT-mhC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="lRk-h4-EeK"/>
+                            <constraint firstItem="LJm-FT-mhC" firstAttribute="centerX" secondItem="3TA-KZ-2Nj" secondAttribute="centerX" id="sV5-pM-nq7"/>
+                            <constraint firstItem="LJm-FT-mhC" firstAttribute="centerX" secondItem="TgJ-60-98y" secondAttribute="centerX" id="vLL-Da-vLM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="LJm-FT-mhC" id="Wiu-cr-jbF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
